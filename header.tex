@@ -1,0 +1,69 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\usepackage{geometry} 
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{subfiles}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{multicol}	
+
+% compact items
+\setlength{\parindent}{0cm}
+\setlength{\columnseprule}{2pt}
+
+\graphicspath{ {images/} }
+\geometry{top=0.5cm,left=0.5cm,right=0.5cm,bottom=0.5cm} 
+
+\newcommand{\SubItem}[1]{
+	{\setlength\itemindent{15pt} \item[-] #1}
+}
+
+%Define Color
+\definecolor{green}{rgb}{0,0.6,0}
+\definecolor{grey}{rgb}{0.89,0.89,0.89}
+
+\definecolor{erdbeere}{RGB}{119, 221, 119}
+\definecolor{hblue}{RGB}{179, 225, 172}
+\definecolor{nblue}{RGB}{65, 163, 23}
+\definecolor{lblue}{RGB}{4, 99, 7}
+
+%define the section
+\titleformat{\section}[block]
+	{\normalfont\LARGE\bfseries}
+	{}
+	{0pt} 
+	{\colorsection}
+\titlespacing{\section}{0pt}{0.1ex}{0.1ex}
+
+\newcommand{\colorsection}[1]{%
+	\colorbox{lblue!40}{\parbox{0.99\linewidth}{\color{black}\thesection\ #1}}}
+	
+\titlespacing*{\section}
+{0ex}{0pt}{0pt}
+
+%define the subsection
+\titleformat{\subsection}[block]
+	{\normalfont\LARGE\bfseries}
+	{}
+	{0pt}
+	{\colorsubsection}
+\titlespacing*{\subsection}{0pt}{0.1ex}{0.1ex}
+
+\newcommand{\colorsubsection}[1]{%
+	\colorbox{nblue!40}{\parbox{0.99\linewidth}{\color{black}\thesubsection\ #1}}}
+
+%define the subsubsection
+\titleformat{\subsubsection}[block]
+	{\normalfont\bfseries}
+	{}
+	{0pt}
+	{\colorsubsubsection}
+\titlespacing*{\subsubsection}{0pt}{0.1ex}{0.1ex}
+ 
+\newcommand{\colorsubsubsection}[1]{%
+	\colorbox{hblue!40}{\parbox{0.99\linewidth}{\color{black}\thesubsubsection\ #1}}}
