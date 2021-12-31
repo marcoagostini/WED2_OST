@@ -1,2 +1,38 @@
+% die Aufgabe und den Einsatzbereich von (CSS) Präprozessoren erklären.
+% Sass (SCSS) Code interpretieren (inkl. Variablen, Nesting, Mixing, Partials und Funktionen) und den aus Sass/SCSS Code den zugehörigen CSS Code generieren. 
+% Fehler in Sass/SCSS Code identifizieren und beheben, bzw. Lücken im Code füllen.  
+% mit Sass/SCSS Einheiten rechnen. 
+% zwei spezifische Einsatzbereiche von PostCSS nennen. 
+% erklären in welchen Kontexten es sinnvoll ist Web-Build-Tools einzusetzen und zwei spezifische Features dieser Build Tools   nennen
+% die in der Vorlesung behandelten Präprozessoren, Testing Tools, Build-Tools etc.  der   korr ekten   Kategorie zuordnen.
 
 \section{WebDevOps}
+\subsection{SASS}
+Ist ein Prä-Prozessor Compiler für CSS.
+\textbf{Features:} Variablen, Verschachtelung, Partials, Mixins, Extends, Programmierung.
+
+\begin{lstlisting}[style=htmlcssjs]
+@use 'base'; // imports module/partial "_base.scss"
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+nav {
+  ul {
+    margin: 0;
+  }
+}
+@mixin theme($theme: DarkGray) { // definition mixin
+  background: $theme;
+  color: #fff;
+}
+.info { // use of mixin
+  @include theme;
+}  
+%message-shared { // Parent (nesting)
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+.message { // child
+  @extend %message-shared;
+}
+\end{lstlisting}
