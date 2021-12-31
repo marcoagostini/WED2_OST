@@ -1,7 +1,35 @@
+% Animationen mit CSS-Transition-Properties (transition-* und transition) definieren, sowie Fehler in vorgegebenen CSS Regel mit Transition-Properties erklären und korrigieren.
+%  Die Unterschiede der wichtigsten Werte des Properties transition-timing-function (linear, ease-in, ease-out, ease-in-out) erklären und einer entsprechenden Visualisierung des Animationsablaufes zuordnen.
+% Vorhersagen wie sich eine einfache, mittels einer @keyframes Regel beschriebene Animation abläuft.
+% Die vermittelte Heurisitk anwenden um zu bestimmen, on ein CSS-Property animierbar ist.
+% Erklären, warum es nötig sein kann mit einer @property Definition einen Wertebereich für CSS-Custom Property zu definieren.
+% Erklären, warum die Animation des opacity-Properties gut geeignet ist für Fade-In und Fade-out Animatinen, aber zusätzliche Vorkehrungen getroffen werden müssen um die Accessability sicherzustellen.
+% Erklären, warum CSS-Animationen JS-basierten Animationen vorzuziehen sind.
+% Den Vorteil von Undo im vergleich zu "Aktiven Notifikation" erklären
+% Wichtige Design-Erwägungen beim Einsatz von Undo erklären
+% Die Funktionsweise von Undo und Redo Stacks (bzw. Undo-Manger) erklären.
+
 \section{Animation}
 
+\subsection{Transitions}
+\textbf{\color{blue}Transition Properties:} \\
+\textbf{transition-property:} welches Property geändert wird (name, all, none). \\
+\textbf{transition-duration:} Dauer der Animation \\
+\textbf{transition-timing-functions:} Animationsfunktion \\
+\textbf{transition-delay:} Startverzögerung \\
+\textbf{transition:} property, duration, timing-function delay;\\
+\textbf{transform:} ändert Form und Lokation des Elementes
 
-
-
+\subsection{Animations}
+Gewisse Sachen können nicht animiert werden: border-style, display etc. Mit einer Media-Query können Animation unterbunden werden.
+% TODO Beispiel-Animation einfügen
 
 \section{Internationalization}
+\textbf{\color{blue}I18N} Internationalisation, Programmierung (Sprachwahl)
+\textbf{\color{blue}L10N} Localisation, (Übersetzung für Ort)
+\textbf{\color{blue}G11N} Globalisation, (Englisch, Spanisch etc.)
+\textbf{\color{blue}T9N} Translation
+\textbf{\color{blue}Locale} Sprachregion: String Sprachregionbestimmung
+
+\textbf{\color{blue}ES2021 Internationalization} \\
+\textbf{Intl} Globales Objekt, \textbf{Intl.DisplayNames}  konsitense Übersetzung Sprache, Region, Währung, \textbf{Intl.Collator}  Sprachsensitiver Stringvergleich, \textbf{Intl.DateTimeFormat} Datum, Zeiten sprachsensitiv Formatieren, \textbf{Intl.RelativeTimeFormat} Relative Zeitangaben sprachsensitiv,  \textbf{Intl.NumberFormat} Zahlen sprachsensitiv, \textbf{Intl.ListFormat} Aufzählungen, \textbf{Intl.PluralRules} Pluralspachrgeln interpolieren

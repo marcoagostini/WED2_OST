@@ -1,1 +1,33 @@
+% Je zwei Testrunner und Assertion-Libraries aufzählen.
+% Die Aufgaben von JS Testrunner und Assertion-Libraries nennen.
+% Die Einsatzzwecke unterschiedlicher Testarten erklären (z.B Integration, Regression, Load, Performance, Endurance Test, Chaos Testing, Security Tests, Usability Test)
+% Unit-Tests von Integration-Tests und System-Tests unterscheiden.
+% Beschreiben was in den Phasen (Setup, Exercise, Verify, Teardown) eines Tests passiert
+% Einen einfachen Unit-Test mit dem Mocha und Chai API schreiben
+% Das Verhalten von Test welche die vorgestellten Libraries Unit-Tests und Mocking Libraries verwenden.
+% Bei einem gegebenen Test-Code Test-Double klassifizieren und erklären was die Aufgabe dieses Test Doubles ist.
+% Test-Smells erkennen und Refactoring zur Verbesserung der Tests durchführen
+% Einfache Test-Scripts für Cypres lesen, erklären, debuggen und erstellen können.
+
 \section{Testing}
+\textbf{\textcolor{blue}{Unit Tests:}} Testen einzelner Units (Klassen, Module). Automation relativ einfach. \textbf{Herausforderung:} Isolation der Units, asynchrone Operationen, Testdatengenerierung
+
+\textbf{\textcolor{blue}{Integrationstests:}} Testet das Zusammenspiel von 2 oder mehr Units. Automation meist möglich. \textbf{Herausforderungen:} Isolation der Units, asynchrone Operationen, Simulation Browser \& Benutzerinteraktion, Test mit Datenbank, Testdatengenerierung
+
+\textbf{\textcolor{blue}{Funktionstests:}} Testen ob sich das System nach den Anforderungen (Use-Cases, User Stories) verhält.
+
+\textbf{\textcolor{blue}{(Visuelle) Regressionstests:}}
+Testen, ob Veränderungen im Code zu Änderungen im Verhalten führen. Für beide: Automation möglich mit speziellen Tools
+
+\textbf{\textcolor{blue}{Funktionale Systemtests:}} Testet das Zusammenspiel aller Systemkomponenten in der Zielumgebung. Automation nur in Teilen möglich. \textbf{Herausforderungen:} Realistische aber vorhersagbare Umgebung
+
+\textbf{\textcolor{blue}{Weitere Systemtests:}} Load (Stress), Performance, Endurance Test, Chaos Testing, Security Tests, Usability Tests
+
+\subsection{Tools}
+\textbf{\textcolor{blue}{Test-Runner:}} Nimmt Tests entgegen, führt diese aus und zeigt die resultate an: Ava CLI, jasmine, \textbf{Mocha}
+
+\textbf{\textcolor{blue}{Assertion Library:}} Code zur Ausführung einzelner Tests: Assert, Ava Power-Assert, Expect.js, should.js, \textbf{Chai}
+
+\textbf{\textcolor{blue}{Mocking Library:}} Separierung von Units/Erstellung von Mocks etc: \textbf{Proxyquire, Sinon.js}
+
+\textbf{\textcolor{blue}{DOM Handling:}} Puppeteer, Storybook, Enzyme
