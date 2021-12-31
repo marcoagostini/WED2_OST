@@ -1,0 +1,66 @@
+% können die Vorteile der Nutzung von TypeScript in einem gegebenen Beispielkontext erklären
+% können Typescript mit ESLint-Typescript und Prettier für ihr Testat nutzen  
+% können TypeScript Code auf der Komplexitätsstufe der Übungen lesen und Vorhersagen zur
+% Identifikation von Typenfehlern durch TypeScript machen
+% TypeScript Klassendefinitionen lesen und in entsprechende Klassendefinitionen in EcmaScript-2015+(inkl. ES2022) konvertieren. 
+% können den Unterschied von Klassen und Interfaces (und Typen) und das Konzept des
+% “Structural Typing“ in TypeScript erklären. 
+% können das Konzept von Union-Types erklären und in Beispielen nutzen.
+
+\section{TypeScript}
+Ist ein Pre-Processor, der JavaScript generiert. \textbf{Features:} Static Typing. \textbf{Basistypten:} boolean, number, string, null, undefined, (any). Variablen mit unkonw kann alles zugewiesen werden.
+
+\begin{lstlisting}[style=JS]
+let myVar: any = 1;
+let myString: string = 'abcd';
+\end{lstlisting}
+
+\subsection{Komplexe Typen}
+Array, Tupels, Enums, String Literal Union Types
+
+\subsection{Funktionsdeklaration}
+Funktionsparameter können optional sein.
+\begin{lstlisting}[style=JS]
+function add(s1: string, s2:string): string;
+function add(s1: string, s2?:string): string; 
+\end{lstlisting}
+
+\subsection{Klassen}
+\begin{lstlisting}[style=JS]
+class Counter {
+	#doors: number; //private class field
+	public static readonly WOOD_FACTORS = {'oak': 80};
+	// Konstruktor Code wird automatisch generiert
+	constructor(public make:string, public colors: string); 
+
+}
+\end{lstlisting}
+
+\subsection{Interfaces}
+Interfaces (1 pro Klasse) können in Deklaration von Klassen genutzt werden.
+
+\subsection{Type Assertion}
+\begin{lstlisting}[style=htmlcssjs]
+const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement; 
+\end{lstlisting}
+
+\subsection{Type Operator}
+Mit dem Keyword lässt sich ein Type aus einem anderen Typ ableiten.
+\begin{lstlisting}[style=JS]
+type Point = { x: number, y: number };
+type P = keyof Point;
+\end{lstlisting}
+
+\subsection{Template Literal Types}
+\begin{lstlisting}[style=JS]
+type Shipper = 'UPS' | 'FEDEX' | 'DHL';
+type TrackingType = 'Overnight' | 'Priority' | 'Economy'; 
+type ShipmentMethod = `${Shipper}-${TrackingType}`;
+\end{lstlisting}
+
+\subsection{Generics}
+
+
+
+
+

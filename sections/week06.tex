@@ -1,0 +1,44 @@
+% die folgenden Begriffe erklären: Flexible Layout, Responsive Layout, Graceful Degration,
+% Progressive Enhancement, Mobile First Layout, CSS Resets / CSS Normalization. 
+% CSS Media-Queries erstellen. 
+% Flexible Layout mit dem Box-Model erstellen, interpretieren und korrigieren. inklusive calc(), min(), max(), clamp(); position absolute/relative 
+% Flexbox Layouts erstellen, interpretieren und korrigieren. 
+% CSS Grid Layouts erstellen, interpretieren und korrigieren.
+
+\section{Responsive Layout}
+\textbf{Flexibles Layout:} Dynamisches (grössenadaptives) Layout welches sich ohne Media-Queries umsetzen lassen. \\
+\textbf{Reponsives Layout:} Dynamisches Layout welches für unterschiedliche Geräte, Bereiche von Display-Grössen und unterschiedliche Medien separates Layouts definiert.
+
+\subsection{Media Queries}
+Kann fast alle Einheiten verwenden (em=best Accessibility). \textbf{Typische Triggerpunkte:} 480px, 768px, 992px.
+
+\begin{lstlisting}[style=htmlcssjs]
+@media screen { [width|min-width|max-width]:700px) {}
+@meida (min-width: 20em) and|not (max-width: 30em) {}
+\end{lstlisting}
+
+\subsection{ViewPort}
+Mobile Geräte benötigen Deklaration des Viewports für Media Queries.
+
+\subsection{CSS}
+\subsubsection{calc()}
+Kann verschiedene Werte direkt im CSS verrechnen (Ausser Media Queries).
+\subsubsection{min(), max()}
+Vergleich mehrere Werte und gibt den kleinsten/grössten zurück.
+\subsubsection{clamp()}
+min val, actual size, max val. 
+
+\subsection{Floats}
+Nicht mehr aktuell und nicht mehr zu verwenden.
+
+\subsection{Custom Attributes}
+\begin{lstlisting}[style=htmlcssjs]
+--color-light-red: #ffeaea; // variable
+--color: var(--color-dark-violet); // reference
+\end{lstlisting}
+
+
+
+
+
+

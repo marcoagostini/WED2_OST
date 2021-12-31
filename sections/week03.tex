@@ -1,0 +1,17 @@
+\subsection{Cookie}
+Der Server sendet die Cookies, welcher der Client dann speichert und immer mitsendet. Das Secret wird für die Signierung benötigt.
+
+
+\subsection{Session}
+Eine Session benötigt Cookies als Wiedererkennungsmerkmal des Client. Kann HTTP-Stateless umgehen (Wiederspricht REST).
+
+
+\subsection{JSON Web Token (JWT)}
+Ziel: Stateless Sever. Daten: Ausgestellt für, Ablauf-Datum, Signatur. Nach Authentisierung wird dem Client JWT gesendet und nachher immer wiederverwendet (Autorisation Header).
+
+\subsection{Same-Origin Policy (SOP)}
+Verhindert die Datenverarbeitung von anderen Quellen. \textbf{Origin:} host, protocol, port.
+
+\subsection{Cross-Origin Ressource Sharing (CORS)}
+Ermöglich Datenverarbeitung von anderen Quellen (SOP). Integriert in fetch. 
+

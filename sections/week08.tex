@@ -1,0 +1,24 @@
+% Techniken aufzählen wie Web-UI sinnvoll für Farbenblindeheit optimiert werden können.
+% erklären warum Optimierung für Farbblindheit und Optimierung des Farbkontrasts von Web-UI Elementen nicht das Gleiche ist .
+% Überprüfungsvorschläge des Chrome Accessibility Checks in einem Kontext in Handlungsempfehlungen übersetzen.
+% erklären warum Zoombarkeit von Web-Uis wichtig ist, und welche Praktiken vermieden werden sollten.
+% erklären warum Animationen in Web-UI abgestellt werden können sollen.
+% die Accessibility von Formularen und Tabellen beurteilen und optimieren.
+
+\section{Accessibility}
+\textbf{Stolze Regeln:} Bilder mit Alt-Text, Keine Informationen ausschließlich in Farbe dargestellt, Vorder- und Hintergrund bei reduzierter Farb- und Kontrastwahrnehmung in Standardansicht deutlich unterscheidbar, Skalierung der Schrift über Funktionen des Browsers möglich (arbeiten mit: em/rem), 
+
+\subsection{Farbdesign}
+Die Farben für Farbenblinde simulieren, um unerkennbare Unterscheidungen zu vermeiden. Mehrfach-Codierungen verwenden: Fabre und Form, etc. \textbf{Farbkontraste:} (Wichtig für 50+), Level AA=4.5:1, AAA=7:1.
+
+\subsection{Zoombarkeit}
+Emfpehlung: Nicht unberbinen. 
+
+\subsection{Animationen}
+Empfehlung: sollten abstellbar sein. Verhinderung der Auslösung von Epilepsie und Migräne.
+
+\subsection{Medien}
+Sollten immer einen Alternativen-Text haben.
+
+\subsection{Screen Reader}
+Keine Heading-Levels auslassen, Semantic Elements richtig nutzen, Skip-Links am Anfang der Seite.

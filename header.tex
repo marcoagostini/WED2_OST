@@ -4,7 +4,7 @@
 
 \usepackage{geometry} 
 \usepackage{graphicx}
-\usepackage[english]{babel}
+\usepackage[ngerman]{babel}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{subfiles}
@@ -31,6 +31,149 @@
 \definecolor{hblue}{RGB}{179, 225, 172}
 \definecolor{nblue}{RGB}{65, 163, 23}
 \definecolor{lblue}{RGB}{4, 99, 7}
+ 
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\definecolor{green}{rgb}{0,0.6,0}
+\definecolor{grey}{rgb}{0.89,0.89,0.89}
+
+\definecolor{erdbeere}{RGB}{232 ,204, 222}
+\definecolor{lightgray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{darkgray}{rgb}{0.4, 0.4, 0.4}
+\definecolor{editorGray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{editorOcher}{rgb}{1, 0.5, 0} % #FF7F00 -> rgb(239, 169, 0)
+\definecolor{editorGreen}{rgb}{0, 0.5, 0} % #007C00 -> rgb(0, 124, 0)
+\definecolor{orange}{rgb}{1,0.45,0.13}		
+\definecolor{olive}{rgb}{0.17,0.59,0.20}
+\definecolor{brown}{rgb}{0.69,0.31,0.31}
+\definecolor{purple}{rgb}{0.38,0.18,0.81}
+\definecolor{lightblue}{rgb}{0.1,0.57,0.7}
+\definecolor{lightred}{rgb}{1,0.4,0.5}
+
+% CSS
+\lstdefinelanguage{CSS}{
+	keywords={color,background-image:,margin,padding,font,weight,display,position,top,left,right,bottom,list,style,border,size,white,space,min,width, transition:, transform:, transition-property, transition-duration, transition-timing-function},	
+	sensitive=true,
+	morecomment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	morestring=[b]',
+	morestring=[b]",
+	alsoletter={:},
+	alsodigit={-}
+}
+
+% JavaScript
+\lstdefinelanguage{JavaScript}{
+	morekeywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, foreach},
+	morecomment=[s]{/*}{*/},
+	morecomment=[l]//,
+	morestring=[b]",
+	morestring=[b]'
+}
+
+\lstdefinelanguage{HTML5}{
+	language=html,
+	sensitive=true,	
+	alsoletter={<>=-},	
+	morecomment=[s]{<!-}{-->},
+	tag=[s],
+	otherkeywords={
+		% General
+		>,
+		% Standard tags
+		<!DOCTYPE,
+		</html, <html, <head, <title, </title, <style, </style, <link, </head, <meta, />,
+		% body
+		</body, <body,
+		% footer
+		<footer, /footer,
+		% Divs
+		</div, <div, </div>, 
+		% Paragraphs
+		</p, <p, </p>,
+		% scripts
+		</script, <script,
+		% More tags...
+		<canvas, </canvas, <svg, <rect, <animateTransform, </rect, </svg, <video, <source, <iframe, </iframe, </video, <image, </image, <header, </header, <article, </article, <a, </a, <img, </img, <span, </span, <ul, </ul, <li, </li, <input, <br, <form, <h2, <h1, <h3, <button, <nav, <link, <main, <aside, <style, </style, <label, </label, </form, </button, <figure, </figure, <figcaption, </figcaption, <audio, </audio, </h3
+	},
+	ndkeywords={
+		% General
+		=,
+		% HTML attributes
+		charset=, src=, id=, width=, height=, style=, type=, rel=, href=,
+		% SVG attributes
+		fill=, attributeName=, begin=, dur=, from=, to=, poster=, controls=, x=, y=, repeatCount=, xlink:href=,
+		% properties
+		margin:, padding:, background-image:, border:, top:, left:, position:, width:, height:, margin-top:, margin-bottom:, font-size:, line-height:,
+		% CSS3 properties
+		transform:, -moz-transform:, -webkit-transform:,
+		animation:, -webkit-animation:,
+		transition:,  transition-duration:, transition-property:, transition-timing-function:,
+	}
+}
+
+\lstdefinestyle{JS} {
+   backgroundcolor=\color{grey},
+   aboveskip=0mm,
+   belowskip=0mm,
+   extendedchars=false,
+   basicstyle=\sffamily,
+   columns=flexible,
+   showstringspaces=false,
+   showspaces=false,
+   identifierstyle=\color{blue},
+   commentstyle=\color{editorGreen},
+   keywordstyle=\color{lblue},
+   ndkeywordstyle=\color{editorOcher},
+   stringstyle=\color{green},
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   frame=none,
+   language=JavaScript,
+}
+
+\lstdefinestyle{htmlcssjs} {%
+	backgroundcolor=\color{editorGray},
+	basicstyle={\footnotesize\ttfamily},
+	aboveskip=0mm,
+	belowskip=0mm,   
+	frame=none,
+	% line-numbers
+	%xleftmargin={0.6cm},
+	%numbers=left,
+	stepnumber=1,
+	firstnumber=1,
+	numberfirstline=true,
+	backgroundcolor=\color{grey},	
+	% Code design
+	identifierstyle=\color{black},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywordstyle=\color{editorGreen}\bfseries,
+	stringstyle=\color{editorOcher}\ttfamily,
+	commentstyle=\color{brown}\ttfamily,
+	% Code
+	language=HTML5,
+	basicstyle=\Large\sffamily,
+	alsolanguage=JavaScript,
+	alsodigit={.:;},	
+	tabsize=2,
+	showtabs=true,
+	showspaces=false,
+	showstringspaces=false,
+	extendedchars=true,
+	breaklines=true,
+	% German umlauts
+	literate=%
+	{Ö}{{\"O}}1
+	{Ä}{{\"A}}1
+	{Ü}{{\"U}}1
+	{ß}{{\ss}}1
+	{ü}{{\"u}}1
+	{ä}{{\"a}}1
+	{ö}{{\"o}}1
+}
 
 %define the section
 \titleformat{\section}[block]
